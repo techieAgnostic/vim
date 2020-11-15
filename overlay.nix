@@ -4,8 +4,9 @@ customPlugins: self: super: {
       name = "vim";
       vimrcConfig = {
         pathogen = {
-          knownPlugins = (customPlugins super) // super.vimPlugins;
+          knownPlugins = super.vimPlugins // (customPlugins super);
           pluginNames = [
+            "vim-racket"
             "haskell-vim"
             "rainbow-vim"
             "vimwiki"
@@ -13,35 +14,41 @@ customPlugins: self: super: {
             "vim-sexp"
             "vim-surround"
             "vim-repeat"
+            "slimv"
           ];
         };
         customRC = ''
-          set colorcolumn=80
           set nocompatible
+          
+          filetype on
           filetype plugin on
           filetype indent on
-          filetype on
+
           syntax on
+          
           set encoding=utf-8
+          
           set autoindent
           set smartindent
+          
           set ignorecase
           set smartcase
           set hlsearch
           set history=100
+          
           set number
           set wildmenu
+          
           set backspace=eol,indent,start
-          set tabstop=3 softtabstop=3 expandtab shiftwidth=3 smarttab
+          set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab
       
           autocmd BufNewFile,BufRead *.rkt set filetype=scheme
           autocmd FileType scheme :packadd vim-sexp
-          autocmd FileType scheme :packadd vim-sexp-for-normies
+          autocmd FileType scheme :packadd vim-sexp-for-regular-people
           autocmd FileType scheme :packadd vim-surround
           autocmd FileType scheme :packadd vim-repeat
-          autocmd FileType scheme :packadd paredit-vim
-          autocmd FileType scheme :packadd vim-tslime
-          autocmd FileType scheme :packadd racket-vim
+          autocmd FileType scheme :packadd slimv
+          autocmd FileType scheme :packadd vim-racket
       
           autocmd BufNewFile,BufRead *.hoon set filetype=hoon
           autocmd FileType hoon :packadd hoon-vim

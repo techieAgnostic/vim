@@ -13,13 +13,30 @@
       url = "github:frazrepo/vim-rainbow";
       flake = false;
     };
+    vim-racket-src = {
+      url = "github:wlangstroth/vim-racket";
+      flake = false;
+    };
+    slimv-src = {
+      url = "github:kovisoft/slimv";
+      flake = false;
+    };
   };
-  outputs = { self, nixpkgs, flake-utils, rainbow-vim-src, ... }: 
+  outputs = { self, nixpkgs, flake-utils, rainbow-vim-src
+            , vim-racket-src, slimv-src, ... }: 
   let
     customPlugins = pkgs: {
       rainbow-vim = pkgs.vimUtils.buildVimPlugin {
         name = "rainbow-vim";
         src = rainbow-vim-src;
+      };
+      vim-racket = pkgs.vimUtils.buildVimPlugin {
+        name = "vim-racket";
+        src = vim-racket-src;
+      };
+      slimv = pkgs.vimUtils.buildVimPlugin {
+        name = "slimv";
+        src = slimv-src;
       };
     };
   in flake-utils.lib.eachDefaultSystem (system:

@@ -51,7 +51,41 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
-        "rainbow-vim-src": "rainbow-vim-src"
+        "rainbow-vim-src": "rainbow-vim-src",
+        "slimv-src": "slimv-src",
+        "vim-racket-src": "vim-racket-src"
+      }
+    },
+    "slimv-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1600894996,
+        "narHash": "sha256-5HCyyBXoA/esoTYlFBX/5vxQ7LK/w+rcXoAc6gQ5WCs=",
+        "owner": "kovisoft",
+        "repo": "slimv",
+        "rev": "6dfc46912655ab629634d021e9c5b0bd27023417",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kovisoft",
+        "repo": "slimv",
+        "type": "github"
+      }
+    },
+    "vim-racket-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1595555951,
+        "narHash": "sha256-XqbR9qMvvaeZ7LHUemocJQQ/CaJSHxEwh7B7Y1o6KhU=",
+        "owner": "wlangstroth",
+        "repo": "vim-racket",
+        "rev": "bca2643c3d8bd0fcd46ab73bee69023a5da1964b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wlangstroth",
+        "repo": "vim-racket",
+        "type": "github"
       }
     }
   },
