@@ -15,6 +15,7 @@ customPlugins: self: super: {
             "vim-surround"
             "vim-repeat"
             "slimv"
+            "idris-vim"
           ];
         };
         customRC = ''
