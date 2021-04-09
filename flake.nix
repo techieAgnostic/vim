@@ -10,7 +10,7 @@
     };
 
     rainbow-vim-src = {
-      url = "github:frazrepo/vim-rainbow";
+      url = "github:junegunn/rainbow_parentheses.vim";
       flake = false;
     };
     vim-racket-src = {
