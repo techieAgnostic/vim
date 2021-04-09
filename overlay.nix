@@ -41,13 +41,35 @@ customPlugins: self: super: {
           
           set backspace=eol,indent,start
           set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab
-      
-          let g:rainbow_active = 1
-          let g:rainbow_ctermfgs = [ 'lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
+          au VimEnter * RainbowParenthesesToggle
+          au Syntax * RainbowParenthesesLoadRound
+          au Syntax * RainbowParenthesesLoadSquare
+          au Syntax * RainbowParenthesesLoadBraces
+
+          let g:rbpt_colorpairs = [
+            \ ['brown',       'RoyalBlue3'],
+            \ ['Darkblue',    'SeaGreen3'],
+            \ ['darkgray',    'DarkOrchid3'],
+            \ ['darkgreen',   'firebrick3'],
+            \ ['darkcyan',    'RoyalBlue3'],
+            \ ['darkred',     'SeaGreen3'],
+            \ ['darkmagenta', 'DarkOrchid3'],
+            \ ['brown',       'firebrick3'],
+            \ ['gray',        'RoyalBlue3'],
+            \ ['black',       'SeaGreen3'],
+            \ ['darkmagenta', 'DarkOrchid3'],
+            \ ['Darkblue',    'firebrick3'],
+            \ ['darkgreen',   'RoyalBlue3'],
+            \ ['darkcyan',    'SeaGreen3'],
+            \ ['darkred',     'DarkOrchid3'],
+            \ ['red',         'firebrick3'],
+            \ ]
+      
           imap <C-L> λ
           syntax on
           colorscheme default
+
         '';
       };
     };
