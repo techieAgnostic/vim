@@ -6,8 +6,8 @@ customPlugins: self: super: {
         pathogen = {
           knownPlugins = super.vimPlugins // (customPlugins super);
           pluginNames = [
-            "vim-racket"
             "rainbow-vim"
+            "vim-racket"
             "vimwiki"
             "slimv"
           ];
@@ -20,6 +20,12 @@ customPlugins: self: super: {
           filetype indent on
 
           syntax on
+
+          if has("autocmd")
+            au BufReadPost *.rkt,*.rktl set filetype=racket
+            au filetype racket set lisp
+            au filetype racket set autoindent
+          endif
           
           set encoding=utf-8
           
