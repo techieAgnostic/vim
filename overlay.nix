@@ -47,6 +47,7 @@ customPlugins: self: super: {
 
           imap <C-L> λ
           syntax on
+          colorscheme default
         '';
       };
     };

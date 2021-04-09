@@ -34,16 +34,16 @@
     "rainbow-vim-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1547370678,
-        "narHash": "sha256-zha3BNZXJSgEWEyh8fcy1+x3Y+c1DV1eTMa/AQ+sj7M=",
-        "owner": "frazrepo",
-        "repo": "vim-rainbow",
-        "rev": "a6c7fd5a2b0193b5dbd03f62ad820b521dea3290",
+        "lastModified": 1446104795,
+        "narHash": "sha256-aM3sMbRaAU/hUjRBiUiy9CleJW+ZoFb3CEDFhQ2W60c=",
+        "owner": "junegunn",
+        "repo": "rainbow_parentheses.vim",
+        "rev": "27e7cd73fec9d1162169180399ff8ea9fa28b003",
         "type": "github"
       },
       "original": {
-        "owner": "frazrepo",
-        "repo": "vim-rainbow",
+        "owner": "junegunn",
+        "repo": "rainbow_parentheses.vim",
         "type": "github"
       }
     },
