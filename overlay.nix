@@ -7,9 +7,9 @@ customPlugins: self: super: {
           knownPlugins = super.vimPlugins // (customPlugins super);
           pluginNames = [
             "rainbow-vim"
-            "vim-racket"
             "vimwiki"
             "slimv"
+            "vim-racket"
           ];
         };
         customRC = ''
@@ -45,6 +45,8 @@ customPlugins: self: super: {
       
           let g:rainbow_active = 1
           let g:rainbow_ctermfgs = [ 'lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+
+          imap <C-L> λ
         '';
       };
     };
