@@ -19,6 +19,8 @@ customPlugins: self: super: {
           filetype plugin on
           filetype indent on
 
+          syntax on
+          colorscheme delek
 
           if has("autocmd")
             au BufReadPost *.rkt,*.rktl set filetype=racket
@@ -55,20 +57,9 @@ customPlugins: self: super: {
             \ ['darkcyan',    'RoyalBlue3'],
             \ ['darkred',     'SeaGreen3'],
             \ ['darkmagenta', 'DarkOrchid3'],
-            \ ['brown',       'firebrick3'],
-            \ ['gray',        'RoyalBlue3'],
-            \ ['black',       'SeaGreen3'],
-            \ ['darkmagenta', 'DarkOrchid3'],
-            \ ['Darkblue',    'firebrick3'],
-            \ ['darkgreen',   'RoyalBlue3'],
-            \ ['darkcyan',    'SeaGreen3'],
-            \ ['darkred',     'DarkOrchid3'],
-            \ ['red',         'firebrick3'],
             \ ]
       
           imap <C-L> λ
-          syntax on
-          colorscheme default
 
         '';
       };
