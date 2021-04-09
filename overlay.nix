@@ -19,7 +19,6 @@ customPlugins: self: super: {
           filetype plugin on
           filetype indent on
 
-          syntax on
 
           if has("autocmd")
             au BufReadPost *.rkt,*.rktl set filetype=racket
@@ -47,6 +46,7 @@ customPlugins: self: super: {
           let g:rainbow_ctermfgs = [ 'lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
           imap <C-L> λ
+          syntax on
         '';
       };
     };
