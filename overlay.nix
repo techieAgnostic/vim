@@ -44,22 +44,15 @@ customPlugins: self: super: {
           set backspace=eol,indent,start
           set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab
 
-          au VimEnter * RainbowParenthesesToggle
-          au Syntax * RainbowParenthesesLoadRound
-          au Syntax * RainbowParenthesesLoadSquare
-          au Syntax * RainbowParenthesesLoadBraces
-
-          let g:rbpt_colorpairs = [
-            \ ['brown',       'RoyalBlue3'],
-            \ ['Darkblue',    'SeaGreen3'],
-            \ ['darkgray',    'DarkOrchid3'],
-            \ ['darkgreen',   'firebrick3'],
-            \ ['darkcyan',    'RoyalBlue3'],
-            \ ['darkred',     'SeaGreen3'],
-            \ ['darkmagenta', 'DarkOrchid3'],
-            \ ]
+          let g:rainbow_active = 1
       
           imap <C-L> λ
+
+          let g:rainbow_conf = {
+           \ 'ctermfgs': ['red', 'green', 'blue', 'cyan', 'magenta'],
+           \ 'cterms': ['bold']
+           \}
+
 
         '';
       };
