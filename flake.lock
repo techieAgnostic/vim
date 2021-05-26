@@ -15,6 +15,22 @@
         "type": "github"
       }
     },
+    "idris2-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1606405807,
+        "narHash": "sha256-v2oNgtjreNpbN0LV1RIdrcYLjFWj/k9fqGf/w4ig8cE=",
+        "owner": "edwinb",
+        "repo": "idris2-vim",
+        "rev": "964cebee493c85f75796e4f4e6bbb4ac54e2da9e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edwinb",
+        "repo": "idris2-vim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1617808887,
@@ -50,6 +66,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "idris2-src": "idris2-src",
         "nixpkgs": "nixpkgs",
         "rainbow-vim-src": "rainbow-vim-src",
         "slimv-src": "slimv-src",

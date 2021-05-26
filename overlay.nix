@@ -10,6 +10,7 @@ customPlugins: self: super: {
             "vimwiki"
             "slimv"
             "vim-racket"
+            "idris2"
           ];
         };
         customRC = ''

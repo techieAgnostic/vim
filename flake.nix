@@ -21,9 +21,13 @@
       url = "github:kovisoft/slimv";
       flake = false;
     };
+    idris2-src = {
+      url = "github:edwinb/idris2-vim";
+      flake = false;
+    };
   };
   outputs = { self, nixpkgs, flake-utils, rainbow-vim-src
-            , vim-racket-src, slimv-src, ... }: 
+            , vim-racket-src, slimv-src, idris2-src, ... }: 
   let
     customPlugins = pkgs: {
       rainbow-vim = pkgs.vimUtils.buildVimPlugin {
@@ -37,6 +41,10 @@
       slimv = pkgs.vimUtils.buildVimPlugin {
         name = "slimv";
         src = slimv-src;
+      };
+      idris2 = pkgs.vimUtils.buildVimPlugin {
+        name = "idris2";
+        src = idris2-src;
       };
     };
   in flake-utils.lib.eachDefaultSystem (system:
