@@ -10,7 +10,6 @@ customPlugins: self: super: {
             "vimwiki"
             "slimv"
             "vim-racket"
-            "idris2"
           ];
         };
         customRC = ''
@@ -25,7 +24,6 @@ customPlugins: self: super: {
 
           if has("autocmd")
             au BufReadPost *.rkt,*.rktl set filetype=racket
-            au BufReadPost *.lidr set filetype=idris
             au filetype racket set lisp
             au filetype racket set autoindent
           endif
