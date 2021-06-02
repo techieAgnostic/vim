@@ -29,17 +29,15 @@ customPlugins: self: super: {
           if has("autocmd")
             au BufReadPost *.rkt,*.rktl set filetype=racket
             au filetype racket set lisp
-            au filetype racket set scheme
             au filetype racket set autoindent
           endif
           
-          autocmd BufNewFile,BufRead *.rkt set filetype=scheme
-          autocmd FileType scheme :packadd vim-sexp
-          autocmd FileType scheme :packadd vim-sexp-for-regular-people
-          autocmd FileType scheme :packadd vim-surround
-          autocmd FileType scheme :packadd vim-repeat
-          autocmd FileType scheme :packadd slimv
-          autocmd FileType scheme :packadd vim-racket
+          autocmd FileType racket :packadd vim-sexp
+          autocmd FileType racket :packadd vim-sexp-for-regular-people
+          autocmd FileType racket :packadd vim-surround
+          autocmd FileType racket :packadd vim-repeat
+          autocmd FileType racket :packadd slimv
+          autocmd FileType racket :packadd vim-racket
 
           set encoding=utf-8
           
