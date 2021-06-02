@@ -10,6 +10,10 @@ customPlugins: self: super: {
             "vimwiki"
             "slimv"
             "vim-racket"
+            "vim-sexp-mappings-for-regular-people"
+            "vim-sexp"
+            "vim-surround"
+            "vim-repeat"
           ];
         };
         customRC = ''
@@ -25,9 +29,18 @@ customPlugins: self: super: {
           if has("autocmd")
             au BufReadPost *.rkt,*.rktl set filetype=racket
             au filetype racket set lisp
+            au filetype racket set scheme
             au filetype racket set autoindent
           endif
           
+          autocmd BufNewFile,BufRead *.rkt set filetype=scheme
+          autocmd FileType scheme :packadd vim-sexp
+          autocmd FileType scheme :packadd vim-sexp-for-regular-people
+          autocmd FileType scheme :packadd vim-surround
+          autocmd FileType scheme :packadd vim-repeat
+          autocmd FileType scheme :packadd slimv
+          autocmd FileType scheme :packadd vim-racket
+
           set encoding=utf-8
           
           set autoindent
