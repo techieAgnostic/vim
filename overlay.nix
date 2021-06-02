@@ -26,14 +26,17 @@ customPlugins: self: super: {
           syntax on
           colorscheme delek
 
+          nnoremap <Space> <Nop>
+          let maplocalleader=" "
+
           if has("autocmd")
             au BufReadPost *.rkt,*.rktl set filetype=racket
             au filetype racket set lisp
             au filetype racket set autoindent
           endif
           
-          autocmd FileType racket :packadd vim-sexp
           autocmd FileType racket :packadd vim-sexp-for-regular-people
+          autocmd FileType racket :packadd vim-sexp
           autocmd FileType racket :packadd vim-surround
           autocmd FileType racket :packadd vim-repeat
           autocmd FileType racket :packadd slimv
